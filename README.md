@@ -70,8 +70,9 @@ Cara paling ampuh mengatasinya:
 ## Cara personalisasi (paling penting)
 
 1. **Ganti foto** — timpa file di folder `assets/` dengan fotomu, pakai nama
-   file yang sama persis (mis. `photo-1.jpg` untuk foto hati, `photo-2.jpg`
-   untuk polaroid kecil,
+   file yang sama persis (mis. `photo-1.jpg` untuk foto hati, `stack-1.jpg`/
+   `stack-2.jpg`/`stack-3.jpg` untuk tumpukan 3 polaroid kecil di halaman
+   pembuka,
    untuk polaroid, `photo-3.jpg`/`photo-p1.jpg`/`photo-p2.jpg` untuk photo
    strip di halaman pembuka, `gallery-1.jpg` dst untuk Journey), atau
    ubah `src="assets/..."` di `index.html` ke nama file barumu.

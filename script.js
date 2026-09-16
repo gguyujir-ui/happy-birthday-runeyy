@@ -445,50 +445,21 @@ document.addEventListener('DOMContentLoaded', () => {
      perhitungan viewport CSS yang kadang beda-beda tiap HP/browser. */
   function autoFitScenes(){
     const stage = document.querySelector('.stage');
-    const rf = document.getElementById('rotateFrame');
-    if (!stage || !rf) return;
+    if (!stage) return;
     const stageStyles = getComputedStyle(stage);
     const paddingX = parseFloat(stageStyles.paddingLeft) + parseFloat(stageStyles.paddingRight);
     const availableWidth = stage.clientWidth - paddingX;
 
-    // tinggi yang BENERAN ada di layar (bukan tinggi .page yang bisa ikut
-    // membesar mengikuti konten) — dari sinilah kita hitung sisa ruangnya
-    const trueHeight = rf.clientHeight;
-    const paddingY = parseFloat(stageStyles.paddingTop) + parseFloat(stageStyles.paddingBottom);
-    const marginY = parseFloat(stageStyles.marginTop) + parseFloat(stageStyles.marginBottom);
-
     const scenes = [
-      { el: document.querySelector('.collage'), w: 350, h: 300 },
-      { el: document.querySelector('.journey-scene'), w: 480, h: 235 },
-      { el: document.querySelector('.moment-scene'), w: 380, h: 340 },
-      { el: document.querySelector('.playlist-scene'), w: 420, h: 300 }
+      { el: document.querySelector('.collage'), w: 350 },
+      { el: document.querySelector('.journey-scene'), w: 480 },
+      { el: document.querySelector('.moment-scene'), w: 380 },
+      { el: document.querySelector('.playlist-scene'), w: 420 }
     ];
 
-    scenes.forEach(({ el, w, h }) => {
+    scenes.forEach(({ el, w }) => {
       if (!el) return;
-      el.style.transform = ''; // reset dulu biar pengukuran "tinggi asli" siblingnya nggak kena transform lama
-      el.style.marginBottom = '';
-
-      const page = el.closest('.page');
-      const scaleW = Math.min(1, availableWidth / w);
-
-      let scaleH = 1;
-      if (page){
-        const pageStyles = getComputedStyle(page);
-        const gapPx = parseFloat(pageStyles.rowGap || pageStyles.gap) || 0;
-        let othersHeight = 0;
-        let visibleSiblingCount = 0;
-        Array.from(page.children).forEach(child => {
-          visibleSiblingCount++;
-          if (child !== el) othersHeight += child.offsetHeight;
-        });
-        const totalGap = gapPx * Math.max(0, visibleSiblingCount - 1);
-        const heightBudget = trueHeight - marginY - paddingY - othersHeight - totalGap;
-        if (heightBudget > 0) scaleH = Math.min(1, heightBudget / h);
-      }
-
-      // jangan sampai jadi kekecilan banget biar masih kebaca
-      const scale = Math.max(0.55, Math.min(scaleW, scaleH));
+      const scale = Math.min(1, availableWidth / w);
       el.style.transform = `scale(${scale})`;
       el.style.transformOrigin = 'top center';
       // parent tetap disediakan tinggi sesuai hasil scale, biar nggak

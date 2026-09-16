@@ -415,8 +415,10 @@ html, body{
   padding: 6px 6px 16px;
   border-radius: 2px;
   box-shadow: 0 10px 20px rgba(0,0,0,.3);
-  transform: rotate(-7deg);
 }
+.collage__polaroid--1{ transform: rotate(-7deg); z-index: 3; }
+.collage__polaroid--2{ top: 148px; left: 16px; transform: rotate(4deg); z-index: 2; }
+.collage__polaroid--3{ top: 152px; left: 6px; transform: rotate(11deg); z-index: 1; }
 .collage__polaroid img{ width: 100%; height: 100%; object-fit: cover; display: block; background: #ddd; }
 
 .collage__envelope{
@@ -534,6 +536,7 @@ html, body{
 /* generic empty-photo placeholder */
 .ph-empty{
   background: repeating-linear-gradient(45deg, rgba(255,255,255,.15), rgba(255,255,255,.15) 6px, rgba(255,255,255,.05) 6px, rgba(255,255,255,.05) 12px);
+  position: relative;
 }
 .ph-empty::after{
   content: '📷';
