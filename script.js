@@ -452,6 +452,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const scenes = [
       { el: document.querySelector('.collage'), w: 350 },
+      { el: document.querySelector('.journey-scene'), w: 480 },
       { el: document.querySelector('.moment-scene'), w: 380 },
       { el: document.querySelector('.playlist-scene'), w: 420 }
     ];

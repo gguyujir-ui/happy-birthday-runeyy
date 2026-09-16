@@ -415,8 +415,10 @@ html, body{
   padding: 6px 6px 16px;
   border-radius: 2px;
   box-shadow: 0 10px 20px rgba(0,0,0,.3);
-  transform: rotate(-7deg);
 }
+.collage__polaroid--1{ transform: rotate(-7deg); z-index: 3; }
+.collage__polaroid--2{ top: 148px; left: 16px; transform: rotate(4deg); z-index: 2; }
+.collage__polaroid--3{ top: 152px; left: 6px; transform: rotate(11deg); z-index: 1; }
 .collage__polaroid img{ width: 100%; height: 100%; object-fit: cover; display: block; background: #ddd; }
 
 .collage__envelope{
@@ -598,28 +600,36 @@ html, body{
 /* =========================================================
    PAGE — Journey (gallery)
    ========================================================= */
-.gallery{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  width: 100%;
-  margin-top: 8px;
+.journey-scene{
   position: relative;
-  z-index: 2;
+  width: 480px;
+  max-width: 100%;
+  height: 235px;
+  margin: 10px auto 20px;
 }
-.pola{
+.jphoto{
+  position: absolute;
   margin: 0;
+  width: 92px;
+  height: 104px;
   background: #fff;
-  padding: 6px 6px 16px;
+  padding: 5px 5px 14px;
   border-radius: 2px;
   box-shadow: 0 10px 20px rgba(0,0,0,.35);
-  transform: rotate(var(--r,0deg));
-  aspect-ratio: 1 / 1.05;
 }
-.pola img{ width: 100%; height: 100%; object-fit: cover; display: block; background: #ddd; }
-.pola--1{ --r: -4deg; } .pola--2{ --r: 3deg; }
-.pola--3{ --r: 2deg; }  .pola--4{ --r: -3deg; }
-.pola--5{ --r: -2deg; } .pola--6{ --r: 4deg; }
+.jphoto img{ width: 100%; height: 100%; object-fit: cover; display: block; background: #ddd; }
+
+/* baris atas */
+.jphoto--1{ top: 0;   left: 0;   transform: rotate(-5deg); z-index: 2; }
+.jphoto--2{ top: 6px; left: 92px; transform: rotate(3deg);  z-index: 3; }
+.jphoto--3{ top: 2px; left: 184px; transform: rotate(-3deg); z-index: 2; }
+.jphoto--4{ top: 8px; left: 276px; transform: rotate(4deg);  z-index: 3; }
+
+/* baris bawah, sedikit digeser biar natural */
+.jphoto--5{ top: 118px; left: 22px;  transform: rotate(4deg);  z-index: 2; }
+.jphoto--6{ top: 112px; left: 114px; transform: rotate(-4deg); z-index: 3; }
+.jphoto--7{ top: 120px; left: 206px; transform: rotate(2deg);  z-index: 2; }
+.jphoto--8{ top: 114px; left: 298px; transform: rotate(-5deg); z-index: 3; }
 
 .deco{
   position: absolute;
@@ -628,11 +638,11 @@ html, body{
   pointer-events: none;
   filter: drop-shadow(0 4px 8px rgba(0,0,0,.25));
 }
-.deco--whale{ top: 8%; right: -6px; font-size: 2.1rem; animation: bob 4s ease-in-out infinite; }
-.deco--saturn1{ bottom: 4%; left: -10px; animation: spin 12s linear infinite; }
-.deco--saturn2{ bottom: 18%; right: -14px; font-size: 1.4rem; animation: spin 16s linear infinite reverse; }
-.deco--heart1{ top: 40%; left: -14px; animation: bob 3.4s ease-in-out infinite; }
-.deco--heart2{ top: 55%; right: -10px; animation: bob 3.8s ease-in-out infinite .4s; }
+.deco--whale{ top: -22px; right: 8px; font-size: 2.1rem; animation: bob 4s ease-in-out infinite; }
+.deco--saturn1{ bottom: -20px; left: 4px; animation: spin 12s linear infinite; }
+.deco--saturn2{ bottom: -14px; right: 28px; font-size: 1.4rem; animation: spin 16s linear infinite reverse; }
+.deco--heart1{ top: 30px; left: -30px; animation: bob 3.4s ease-in-out infinite; }
+.deco--heart2{ bottom: -10px; left: 190px; animation: bob 3.8s ease-in-out infinite .4s; }
 @keyframes bob{ 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(-10px); } }
 @keyframes spin{ from{ transform: rotate(0deg);} to{ transform: rotate(360deg);} }
 
