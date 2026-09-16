@@ -438,45 +438,6 @@ document.addEventListener('DOMContentLoaded', () => {
   let sparks = [];
   let rafId = null;
 
-  /* ---------- Auto-fit "scene" (collage/moment/playlist) ----------
-     Ukuran & posisi elemen di dalamnya didesain pakai px tetap, jadi
-     kita ukur beneran lebar yang tersedia lewat JS, lalu di-scale
-     supaya selalu pas di layar berapa pun — nggak gantung ke
-     perhitungan viewport CSS yang kadang beda-beda tiap HP/browser. */
-  function autoFitScenes(){
-    const stage = document.querySelector('.stage');
-    if (!stage) return;
-    const stageStyles = getComputedStyle(stage);
-    const paddingX = parseFloat(stageStyles.paddingLeft) + parseFloat(stageStyles.paddingRight);
-    const availableWidth = stage.clientWidth - paddingX;
-
-    const scenes = [
-      { el: document.querySelector('.collage'), w: 350 },
-      { el: document.querySelector('.moment-scene'), w: 380 },
-      { el: document.querySelector('.playlist-scene'), w: 420 }
-    ];
-
-    scenes.forEach(({ el, w }) => {
-      if (!el) return;
-      const scale = Math.min(1, availableWidth / w);
-      el.style.transform = `scale(${scale})`;
-      el.style.transformOrigin = 'top center';
-      // parent tetap disediakan tinggi sesuai hasil scale, biar nggak
-      // ninggalin lubang kosong atau kepotong
-      el.style.marginBottom = (el.offsetHeight * (1 - scale) * -1) + 'px';
-    });
-  }
-  window.addEventListener('resize', autoFitScenes);
-  window.addEventListener('orientationchange', () => setTimeout(autoFitScenes, 200));
-  // beberapa halaman baru dibuat/di-hidden belakangan, jadi ukur ulang
-  // tiap kali pindah halaman juga
-  const _origGoTo = goTo;
-  goTo = function(name){
-    _origGoTo(name);
-    setTimeout(autoFitScenes, 260);
-  };
-  setTimeout(autoFitScenes, 100);
-
   function resizeCanvas(){
     if (!canvas) return;
     // pakai ukuran layout sendiri (bukan window.innerWidth/Height) supaya
