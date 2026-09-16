@@ -536,7 +536,6 @@ html, body{
 /* generic empty-photo placeholder */
 .ph-empty{
   background: repeating-linear-gradient(45deg, rgba(255,255,255,.15), rgba(255,255,255,.15) 6px, rgba(255,255,255,.05) 6px, rgba(255,255,255,.05) 12px);
-  position: relative;
 }
 .ph-empty::after{
   content: '📷';
