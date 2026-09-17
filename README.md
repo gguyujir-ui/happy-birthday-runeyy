@@ -72,7 +72,10 @@ Cara paling ampuh mengatasinya:
 1. **Ganti foto** — timpa file di folder `assets/` dengan fotomu, pakai nama
    file yang sama persis (mis. `photo-1.jpg` untuk foto hati, `photo-2.jpg`
    untuk polaroid, `photo-3.jpg`/`photo-p1.jpg`/`photo-p2.jpg` untuk photo
-   strip di halaman pembuka, `gallery-1.jpg` dst untuk Journey), atau
+   strip di halaman pembuka, `gallery-1.jpg` dst untuk Journey,
+   `photo-moment.jpg` untuk Moment, `playlist-1.jpg`/`playlist-2.jpg`/
+   `playlist-3.jpg` untuk Playlist — total 12 foto, semuanya nama unik,
+   nggak ada yang dipakai dobel), atau
    ubah `src="assets/..."` di `index.html` ke nama file barumu.
 2. **Ganti nama & pesan** — buka `index.html`, cari teks seperti
    `Freya Anindya` dan paragraf ucapan, ganti dengan nama dan kata-katamu
