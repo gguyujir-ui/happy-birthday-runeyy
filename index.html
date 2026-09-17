@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>for you 🤍 — kado virtual</title>
+<title>for you 🤍 — virtual gift</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
@@ -28,7 +28,7 @@
   <section class="page" id="page-cover" data-page="cover">
     <p class="eyebrow">for you,</p>
     <h1 class="script-xl">aruna romeesa</h1>
-    <p class="hint">tekan amplopnya</p>
+    <p class="hint">press the envelope</p>
 
     <button class="envelope" id="envelopeBtn" aria-label="Buka amplop">
       <span class="envelope__back"></span>
@@ -37,7 +37,7 @@
       <span class="envelope__letter-peek"></span>
     </button>
 
-    <p class="tap-note">ketuk untuk lanjut</p>
+    <p class="tap-note">tap to continue</p>
   </section>
 
   <!-- ============ PAGE 1 — LETTER (photo collage, ala referensi) ============ -->
@@ -57,7 +57,7 @@
         <img class="collage__rose collage__rose--1" src="assets/rose.svg" alt="">
         <span class="collage__rose--small">🌷</span>
         <div class="collage__note">
-          <p class="script-lg">Happy<br>Birthday</p>
+          <p class="script-lg">happy<br>birthday</p>
         </div>
       </div>
 
@@ -72,33 +72,33 @@
       <img class="collage__bloom--3" src="assets/blossom.svg" alt="">
     </div>
 
-    <button class="tap-surprise" id="openMenuBtn" data-goto="menu">Tekan untuk Kejutan</button>
+    <button class="tap-surprise" id="openMenuBtn" data-goto="menu">press for a surprise</button>
   </section>
 
   <!-- ============ PAGE 2 — MENU ============ -->
   <section class="page" id="page-menu" data-page="menu" hidden>
-    <h2 class="script-lg center">Pilih Kejutannya</h2>
+    <h2 class="script-lg center">choose a surprise</h2>
 
     <div class="menu-grid">
       <button class="menu-item" data-goto="journey">
         <span class="menu-icon">📷</span>
-        <span class="script-sm">Journey</span>
+        <span class="script-sm">journey</span>
       </button>
       <button class="menu-item" data-goto="moment">
         <span class="menu-icon">🕰️</span>
-        <span class="script-sm">Moment</span>
+        <span class="script-sm">moment</span>
       </button>
       <button class="menu-item" data-goto="playlist">
         <span class="menu-icon">💿</span>
-        <span class="script-sm">Playlist</span>
+        <span class="script-sm">playlist</span>
       </button>
       <button class="menu-item" data-goto="wish">
         <span class="menu-icon">🕯️</span>
-        <span class="script-sm">Wish</span>
+        <span class="script-sm">wish</span>
       </button>
       <button class="menu-item" data-goto="game">
         <span class="menu-icon">🔮</span>
-        <span class="script-sm">Ramalan</span>
+        <span class="script-sm">ramalan</span>
       </button>
     </div>
   </section>
@@ -126,7 +126,7 @@
   <section class="page has-back" id="page-moment" data-page="moment" hidden>
 
     <div class="moment-scene">
-      <p class="moment-scene__name script-xl">Freya Anindya</p>
+      <p class="moment-scene__name script-xl">aruna romeesa</p>
 
       <div class="moment-scene__note">
         <p class="paper-text">
@@ -151,7 +151,7 @@
         <div class="vinyl" id="vinyl"></div>
         <div class="music-info">
           <button class="play-btn" id="playBtn" aria-label="Putar musik">▶</button>
-          <span>Play Musik</span>
+          <span>play musik</span>
         </div>
       </div>
     </div>
@@ -198,7 +198,7 @@
 
   <!-- ============ PAGE 6 — WISH (blow the candles) ============ -->
   <section class="page has-back" id="page-wish" data-page="wish" hidden>
-    <h2 class="script-lg center">Tutup Mata, Buat Permintaan</h2>
+    <h2 class="script-lg center">tutup mata, buat permintaan</h2>
 
     <div class="cake" id="cake">
       <span class="cake__candle cake__candle--1"><span class="cake__flame">🔥</span></span>
@@ -213,22 +213,22 @@
     <textarea class="wish-input" id="wishInput" maxlength="300"
       placeholder="Tulis permintaanmu di sini (nanti dikirim diam-diam ke aku 🤫)"></textarea>
 
-    <button class="btn-gold" id="blowBtn">Tiup Lilin &amp; Kirim Permintaan</button>
+    <button class="btn-gold" id="blowBtn">tiup lilin &amp; send request</button>
     <p class="wish-status" id="wishStatus" hidden></p>
 
     <div class="wish-reveal" id="wishReveal" hidden>
       <p class="paper-text center">
-        Permintaanmu sudah terkirim ke bintang ✨<br>
-        Semoga semuanya segera terkabul, sayang 🤍
+        permintaanmu sudah terkirim ke akmal ✨<br>
+        semoga semuanya segera terkabul, best🤍
       </p>
     </div>
   </section>
 
   <!-- ============ PAGE 7 — RAMALAN (birthday personality fortune) ============ -->
   <section class="page has-back" id="page-game" data-page="game" hidden>
-    <h2 class="script-lg center">Ramalan Ulang Tahun Tahun Ini</h2>
+    <h2 class="script-lg center">ramalan ulang tahun tahun ini</h2>
 
-    <div class="quiz-progress"><span id="quizProgress">Soal 1/5</span></div>
+    <div class="quiz-progress"><span id="quizProgress">soal 1/5</span></div>
 
     <div class="quiz-card" id="quizCard">
       <!-- diisi otomatis lewat script.js -->
@@ -237,7 +237,7 @@
     <div class="quiz-result" id="quizResult" hidden>
       <p class="script-lg" id="quizScoreText"></p>
       <p class="paper-text center" id="quizScoreNote"></p>
-      <button class="btn-gold" id="quizRestart">Ramal Lagi</button>
+      <button class="btn-gold" id="quizRestart">ramal lagi</button>
     </div>
   </section>
 
@@ -246,11 +246,11 @@
 <canvas id="confetti"></canvas>
 
 <!-- ============ TOMBOL BACK GLOBAL (tetap di pojok, nggak ikut animasi halaman) ============ -->
-<button class="btn-back" id="globalBackBtn" data-goto="menu" hidden>‹ Back</button>
+<button class="btn-back" id="globalBackBtn" data-goto="menu" hidden>‹ back</button>
 
 <!-- ============ MASKOT PENGGIRING ============ -->
 <div class="mascot" id="mascot">
-  <div class="mascot__bubble" id="mascotBubble">Hai! Yuk buka amplopnya 💌</div>
+  <div class="mascot__bubble" id="mascotBubble">hai! yuk buka amplopnya 💌</div>
   <div class="mascot__body">
     <span class="mascot__blob"></span>
     <span class="mascot__cheek mascot__cheek--l"></span>
