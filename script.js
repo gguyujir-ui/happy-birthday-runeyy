@@ -7,9 +7,9 @@
 // terkirim otomatis ke emailmu. Cara dapetin nilai-nilai ini
 // ada di README.md bagian "Setup kirim Wish ke email".
 // ---------------------------------------------------------
-const EMAILJS_PUBLIC_KEY  = 'PFwO6FnKLFMlIEynb';
-const EMAILJS_SERVICE_ID  = 'service_n8u03nr';
-const EMAILJS_TEMPLATE_ID = 'template_io97yer';
+const EMAILJS_PUBLIC_KEY  = 'PASTE_PUBLIC_KEY_DI_SINI';
+const EMAILJS_SERVICE_ID  = 'PASTE_SERVICE_ID_DI_SINI';
+const EMAILJS_TEMPLATE_ID = 'PASTE_TEMPLATE_ID_DI_SINI';
 
 const emailjsReady =
   typeof emailjs !== 'undefined' &&

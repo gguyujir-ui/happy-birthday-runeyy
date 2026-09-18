@@ -74,7 +74,7 @@ Cara paling ampuh mengatasinya:
    untuk polaroid, `photo-3.jpg`/`photo-p1.jpg`/`photo-p2.jpg` untuk photo
    strip di halaman pembuka, `gallery-1.jpg` dst untuk Journey,
    `photo-moment.jpg` untuk Moment, `playlist-1.jpg`/`playlist-2.jpg`/
-   `playlist-3.jpg` untuk Playlist — total 15 foto, semuanya nama unik,
+   `playlist-3.jpg` untuk Playlist — total 12 foto, semuanya nama unik,
    nggak ada yang dipakai dobel), atau
    ubah `src="assets/..."` di `index.html` ke nama file barumu.
 2. **Ganti nama & pesan** — buka `index.html`, cari teks seperti
