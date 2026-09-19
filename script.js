@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     journey: 'ini nih momen-momen nya 📸',
     moment: 'baca pelan-pelan ya~ 🥹',
     playlist: 'sambil dengerin lagu ini yuk 🎶',
-    wish: 'tulis dulu permintaanmu, baru boleh tiup lilinnya 🕯️',
+    wish: 'tulis dulu wish nya, baru boleh tiup lilinnya 🕯️',
     game: 'yuk coba tebak-tebak ramalannya 🔮'
   };
   function updateMascot(name){
@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
         wishInput.focus();
         wishStatus.hidden = false;
         wishStatus.classList.add('is-nudge');
-        wishStatus.textContent = 'tulis dulu permintaanmu ya, baru bisa ditiup lilinnya 🥺';
+        wishStatus.textContent = 'tulis dulu wish nya, baru bisa ditiup lilinnya 🥺';
         return;
       }
 
@@ -213,14 +213,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       wishStatus.hidden = false;
-      wishStatus.textContent = 'mengirim permintaanmu...';
+      wishStatus.textContent = 'mengirim wish mu...';
 
       emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
         message: wishText,
         source: 'Wish',
         sent_at: new Date().toLocaleString('id-ID')
       }).then(() => {
-        wishStatus.textContent = 'Permintaanmu berhasil terkirim 🤍';
+        wishStatus.textContent = 'wish mu sudah terkirim 🤍';
       }).catch((error) => {
     console.error('EmailJS Error:', error);
     wishStatus.textContent = 'gagal: ' + (error.text || error.message || JSON.stringify(error));
@@ -236,69 +236,69 @@ document.addEventListener('DOMContentLoaded', () => {
     {
       key: 'sosial',
       title: 'Si Kupu-Kupu Sosial 🦋',
-      note: 'Tahun ini kamu bakal dikelilingi tawa dan orang-orang baik. Energimu itu magnet buat circle-circle seru — teruslah jadi cahaya di setiap ruangan yang kamu masuki ✨'
+      note: 'tahun ini kamu bakal dikelilingi tawa dan orang-orang baik. Energimu itu magnet buat circle-circle seru — teruslah jadi cahaya di setiap ruangan yang kamu masuki ✨'
     },
     {
       key: 'petualang',
       title: 'Si Petualang 🌍',
-      note: 'Tahun ini penuh cerita baru buat kamu! Beranilah coba hal-hal yang belum pernah kamu lakuin, karena versi terbaik kamu ada di luar zona nyaman 🚀'
+      note: 'tahun ini penuh cerita baru buat kamu! Beranilah coba hal-hal yang belum pernah kamu lakuin, karena versi terbaik kamu ada di luar zona nyaman 🚀'
     },
     {
       key: 'tenang',
       title: 'Si Pemimpi Tenang 🌙',
-      note: 'Tahun ini saatnya kamu lebih baik-baik sama diri sendiri. Semoga hari-harimu dipenuhi ketenangan, dan semua yang kamu impikan diam-diam pelan-pelan jadi nyata 🤍'
+      note: 'tahun ini saatnya kamu lebih baik-baik sama diri sendiri. Semoga hari-harimu dipenuhi ketenangan, dan semua yang kamu impikan diam-diam pelan-pelan jadi nyata 🤍'
     },
     {
       key: 'sayang',
       title: 'Si Penyayang Sejati 💞',
-      note: 'Tahun ini bakal makin hangat karena orang-orang di sekitarmu makin sayang kamu. Kamu itu rumah buat banyak orang — semoga kamu juga selalu dapet kehangatan yang sama balik 🏡'
+      note: 'tahun ini bakal makin hangat karena orang-orang di sekitarmu makin sayang kamu. Kamu itu rumah buat banyak orang — semoga kamu juga selalu dapet kehangatan yang sama balik 🏡'
     }
   ];
 
   const quizQuestions = [
     {
-      q: 'Kalau ulang tahunmu tahun ini adalah sebuah lagu, iramanya kayak apa?',
+      q: 'kalau ulang tahunmu tahun ini adalah sebuah lagu, iramanya kayak apa?',
       options: [
-        '🎉 Upbeat, bikin semua orang ikut goyang',
-        '🧭 Nada petualangan, penuh kejutan',
-        '🌙 Slow, healing, syahdu',
-        '💌 Manis, related sama satu orang spesial'
+        '🎉 upbeat, bikin semua orang ikut goyang',
+        '🧭 nada(imut) petualangan, penuh kejutan',
+        '🌙 slow, healing, syahdu',
+        '💌 manis, related sama satu orang spesial'
       ]
     },
     {
-      q: 'Kalau tahun ini kamu jadi karakter utama sebuah film, ceritanya soal…',
+      q: 'kalau tahun ini kamu jadi karakter utama sebuah film, ceritanya soal…',
       options: [
-        '🎊 Ngumpulin party crew paling seru sejagat',
-        '🗺️ Explore dunia yang belum pernah disentuh',
-        '🍃 Belajar pelan-pelan buat lebih damai sama diri sendiri',
-        '🏡 Nemuin arti "rumah" lewat orang-orang tersayang'
+        '🎊 ngumpulin crew paling seru sejagat',
+        '🗺️ explore dunia yang belum pernah disentuh',
+        '🍃 belajar pelan-pelan buat lebih damai sama diri sendiri',
+        '🏡 nemuin arti "rumah" lewat orang-orang tersayang'
       ]
     },
     {
-      q: 'Satu skill baru yang pengen kamu unlock tahun ini?',
+      q: 'satu skill baru yang pengen kamu unlock tahun ini?',
       options: [
-        '😄 Jago bikin siapa aja langsung akrab',
-        '🎢 Berani ambil risiko & lompat ke hal baru',
-        '🧘 Lebih tenang, nggak gampang overthinking',
-        '💞 Lebih ekspresif nunjukin sayang ke orang terdekat'
+        '😄 jago bikin siapa aja langsung akrab',
+        '🎢 berani ambil risiko & lompat ke hal baru',
+        '🧘 lebih tenang, nggak gampang overthinking',
+        '💞 lebih ekspresif nunjukin sayang ke orang terdekat'
       ]
     },
     {
-      q: 'Kalau ada "soundtrack tahun ini" buat kamu, judulnya…',
+      q: 'kalau ada "soundtrack tahun ini" buat kamu, judulnya…',
       options: [
-        '"Party Sampai Pagi"',
-        '"Jalan yang Belum Pernah Kulewati"',
-        '"Napas Panjang, Pelan-Pelan"',
-        '"Untukmu, Selalu"'
+        '"party sampai pagi"',
+        '"jalan yang belum pernah kulewati"',
+        '"napas panjang, pelan-lelan"',
+        '"untukmu, selalu"'
       ]
     },
     {
-      q: 'Kado terbaik yang kamu harap datang tahun ini (selain kado ini, hehe)?',
+      q: 'kado terbaik yang kamu harap datang tahun ini (selain kado ini, hehe)?',
       options: [
-        '🎈 Lebih banyak circle & cerita seru bareng teman',
-        '✈️ Satu petualangan besar yang bikin deg-degan',
-        '🕊️ Ketenangan & waktu buat diri sendiri',
-        '🤍 Lebih banyak waktu sama orang-orang tersayang'
+        '🎈 lebih banyak circle & cerita seru bareng teman',
+        '✈️ satu petualangan besar yang bikin deg-degan',
+        '🕊️ ketenangan & waktu buat diri sendiri',
+        '🤍 lebih banyak waktu sama orang-orang tersayang'
       ]
     }
   ];
