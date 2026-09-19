@@ -221,9 +221,10 @@ document.addEventListener('DOMContentLoaded', () => {
         sent_at: new Date().toLocaleString('id-ID')
       }).then(() => {
         wishStatus.textContent = 'Permintaanmu berhasil terkirim 🤍';
-      }).catch(() => {
-        wishStatus.textContent = 'Permintaanmu tersimpan, tapi gagal terkirim ke email.';
-      });
+      }).catch((error) => {
+    console.error('EmailJS Error:', error);
+    wishStatus.textContent = 'gagal: ' + (error.text || error.message || JSON.stringify(error));
+    });
     });
   }
 
