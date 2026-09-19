@@ -66,14 +66,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const mascot = document.getElementById('mascot');
   const mascotBubble = document.getElementById('mascotBubble');
   const mascotHints = {
-    cover: 'Hai! Yuk buka amplopnya 💌',
-    letter: 'Coba tekan tulisannya di bawah~ 👉',
-    menu: 'Mau buka yang mana dulu nih?',
-    journey: 'Ini nih momen-momen kalian 📸',
-    moment: 'Baca pelan-pelan ya~ 🥹',
-    playlist: 'Sambil dengerin lagu ini yuk 🎶',
-    wish: 'Tulis dulu permintaanmu, baru boleh tiup lilinnya 🕯️',
-    game: 'Yuk coba tebak-tebak ramalannya 🔮'
+    cover: 'hai! yuk buka amplopnya 💌',
+    letter: 'coba tekan tulisannya di bawah~ 👉',
+    menu: 'mau buka yang mana dulu nih?',
+    journey: 'ini nih momen-momen nya 📸',
+    moment: 'baca pelan-pelan ya~ 🥹',
+    playlist: 'sambil dengerin lagu ini yuk 🎶',
+    wish: 'tulis dulu permintaanmu, baru boleh tiup lilinnya 🕯️',
+    game: 'yuk coba tebak-tebak ramalannya 🔮'
   };
   function updateMascot(name){
     if (!mascotBubble) return;
@@ -204,9 +204,9 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => { wishReveal.hidden = false; }, 300);
       burstConfetti();
       fireworksShow(6);
-      cheerMascot('Yeay, wish-nya udah terbang ke bintang! ✨');
+      cheerMascot('yeay, wish-nya udah terbang ke bintang! ✨');
 
-      if (!emailjsReady){
+      if (emailjsReady){
         // Belum di-setup — lihat README.md bagian "Setup kirim Wish ke email".
         console.warn('EmailJS belum dikonfigurasi. Wish belum terkirim ke email.');
         return;
