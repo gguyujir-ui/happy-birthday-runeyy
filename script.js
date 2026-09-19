@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', () => {
         wishInput.focus();
         wishStatus.hidden = false;
         wishStatus.classList.add('is-nudge');
-        wishStatus.textContent = 'Tulis dulu permintaanmu ya, baru bisa ditiup lilinnya 🥺';
+        wishStatus.textContent = 'tulis dulu permintaanmu ya, baru bisa ditiup lilinnya 🥺';
         return;
       }
 
@@ -206,14 +206,14 @@ document.addEventListener('DOMContentLoaded', () => {
       fireworksShow(6);
       cheerMascot('yeay, wish-nya udah terbang ke bintang! ✨');
 
-      if (emailjsReady){
+      if (!emailjsReady){
         // Belum di-setup — lihat README.md bagian "Setup kirim Wish ke email".
         console.warn('EmailJS belum dikonfigurasi. Wish belum terkirim ke email.');
         return;
       }
 
       wishStatus.hidden = false;
-      wishStatus.textContent = 'Mengirim permintaanmu...';
+      wishStatus.textContent = 'mengirim permintaanmu...';
 
       emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
         message: wishText,
